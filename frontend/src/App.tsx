@@ -1,15 +1,13 @@
 import React, {useMemo, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import commonClient from "common-client"
-import aClient from "a-client"
-import bClient from "b-client"
+import metaClient from "meta-client"
 
-const createClient = commonClient.org.example.commonclient.createClient;
-const JsTodosApi = aClient.org.example.aclient.JsTodosApi
-type Todo = aClient.org.example.aclient.Todo
-const JsPostsApi = bClient.org.example.bclient.JsPostsApi
-type Post = bClient.org.example.bclient.Post
+const createClient = metaClient.org.example.commonclient.createClient;
+const JsTodosApi = metaClient.org.example.aclient.JsTodosApi
+type Todo = metaClient.org.example.aclient.Todo
+const JsPostsApi = metaClient.org.example.bclient.JsPostsApi
+type Post = metaClient.org.example.bclient.Post
 
 function App() {
     const client = useMemo(() => createClient("https://jsonplaceholder.typicode.com"), [])

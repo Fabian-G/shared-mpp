@@ -18,6 +18,7 @@ kotlin {
             dependencies {
                 implementation("io.ktor:ktor-client-core:1.6.7")
                 implementation("io.ktor:ktor-client-serialization:1.6.7")
+                implementation(project(":common-client"))
             }
         }
     }
